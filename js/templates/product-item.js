@@ -17,11 +17,10 @@ export const item = (product) => {
      <img src="${product.image}" alt="" class="img">
 
     </div>
-  
-
-      <a href="product-page.html?id=${product.id}" class="btn btn--first">product details</a>
-  
-    <button class="btn  js_add-to-cart">add to cart</button>
+    <a href="product-page.html?id=${product.id}" class="btn btn--first" style="margin: ${product.isItRing ? 'auto' : ''}">details</a>
+      ${
+        product.isItRing ? '' : '<button class="btn js_add-to-cart">buy</button>'
+      }
 </div>
 
   </li>
